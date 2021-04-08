@@ -5,18 +5,18 @@ services:
   - docker
 
 before_install:
-  - docker build -t stephengrider/docker-react -f Dockerfile.dev .
+  - docker build -t bibhups/react-app -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true stephengrider/docker-react npm run test
+  - docker run -e CI=true bibhups/react-app npm run test
 
 deploy:
   provider: elasticbeanstalk
-  region: 'us-east-1'
-  app: 'docker'
-  env: 'docker-env'
-  bucket_name: 'elasticbeanstalk-us-east-1-923445559289'
-  bucket_path: 'docker'
+  region: "ap-southeast-1"
+  app: "react-frontend-app"
+  env: "Reactfrontendapp-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-519126177525"
+  bucket_path: "react-frontend-app"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
