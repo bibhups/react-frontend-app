@@ -14,7 +14,7 @@ deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-1"
   app: "react-frontend-app"
-  env: "Reactfrontendapp-env"
+  env: "Reactfrontendapp-env-1"
   bucket_name: "elasticbeanstalk-ap-southeast-1-519126177525"
   bucket_path: "react-frontend-app"
   on:
